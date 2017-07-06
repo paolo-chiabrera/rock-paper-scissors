@@ -1,0 +1,110 @@
+$shape-dim: 100px;
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;;
+  text-align: center;
+}
+
+body, h1, h2, h3 {
+  font-weight: 300
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    color: #5aadbb;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+}
+.header-title {
+  flex: 1;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.header-date {
+  flex: 1;
+  text-align: right;
+  margin: 1rem;
+  white: white;
+}
+
+.footer {
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #1f1f1f;
+  text-align: center;
+  color: white;
+}
+
+.player {
+  border: 1px dotted grey;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.shape-list {
+  list-style: none;
+
+  li {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    display: inline-block;
+    height: $shape-dim;
+    margin: 10px;
+    text-align: center;
+    width: $shape-dim;
+
+    &.selected {
+      border-color: #be0000;
+      border-width: 3px;
+    }
+
+    &.rock {
+      background-image: url('/assets/images/rock.png');
+    }
+
+    &.paper {
+      background-image: url('/assets/images/paper.png');
+    }
+
+    &.scissors {
+      background-image: url('/assets/images/scissors.png');
+    }
+  }
+
+  &.human {
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
+.winner {
+  text-transform: uppercase;
+  font-weight: bold;
+}

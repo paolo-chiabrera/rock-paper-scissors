@@ -1,0 +1,6 @@
+<div class="player">
+  <h3>{{$ctrl.playerType.toUpperCase()}} PLAYER</h3>
+  <ul class="shape-list" ng-class="$ctrl.playerType">
+    <li ng-repeat="shape in $ctrl.shapes" ng-click="$ctrl._onClick(shape)" ng-class="[shape.toLowerCase(), {'selected': $ctrl.selectedShape === shape}]"></li>
+  </ul>
+</div>
