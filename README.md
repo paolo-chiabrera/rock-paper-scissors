@@ -7,3 +7,17 @@
 Simple Rock Paper Scissors game made with Angular.js 1.6
 
 Demo: http://rps.d3lirium.eu/
+
+## run
+
+```sh
+$ npm install
+
+$ npm run serve
+```
+
+## test
+
+```sh
+$ npm run test
+```
